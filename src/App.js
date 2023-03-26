@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Bookmark from "./components/Bookmark";
+import Home from "./components/Home";
+import Random from "./components/Random";
+import { BrowserRouter,Routes,Route} from 'react-router-dom';
+import Bussiness from "./Tags/Bussiness";
+import Wisdom from "./Tags/Wisdom";
+import Famous from "./Tags/Famous";
+import Success from "./Tags/Success";
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Random" element={<Random />} />
+          <Route path="/Bookmark" element={<Bookmark />} />
+          <Route path="/Bussiness" element={<Bussiness />} />
+          <Route path="/Wisdom" element={<Wisdom />} />
+          <Route path="/Famous" element={<Famous />} />
+          <Route path="/Success" element={<Success />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
+
+.App {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+.quote {
+
+    max-width: 750px;
+    height: 320px;
+    border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px rgb(199, 80, 173);
+    margin-bottom: 18px;
+}
+.quote h2 {
+    font-size: 2em;
+    font-family: 'Lobster', cursive;
+}
+.quote small {
+    font-size: 1.5em;
+    font-family: 'Dancing Script', cursive;
+}
+.quote:hover{
+    transform: scale(1.1);
+    border-color: fuchsia;
+}
+@media only screen and (min-width: 300px) and (max-width: 660px) {
+    .quote{    
+        min-width: 350px;
+    }
+
+  }
+
+svg{
+    width: 190px;
+    height: 30px;
+    align-items: flex-end;
+    color: blueviolet;
+}  
+
+svg:hover{
+    color: chartreuse;
+}
+
